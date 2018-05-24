@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainDisplay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today's Menu :"
+            android:textAlignment="center"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#311b92"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Raita, Lauki, Baigan, Aloo"
+            android:textAlignment="center"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#311b92"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#b9f6ca"
+                android:padding="8dp"
+                android:text="Mess Allotment"
+                android:textColor="#311b92" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#b9f6ca"
+                android:padding="8dp"
+                android:text="Change in Menu"
+                android:textColor="#311b92" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#b9f6ca"
+                android:padding="8dp"
+                android:text="Advanced Order"
+                android:textColor="#311b92" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#b9f6ca"
+                android:padding="8dp"
+                android:text="Feedback"
+                android:textColor="#311b92" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffd180"
+            android:lines="20"
+            android:maxLines="20"
+            android:padding="8dp"
+            android:text="Announcements"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#311b92" />
+
+    </LinearLayout>
+</LinearLayout>
