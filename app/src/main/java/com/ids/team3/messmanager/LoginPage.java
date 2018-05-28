@@ -70,8 +70,10 @@ public class LoginPage extends AppCompatActivity {
                 urlConnection.setDoOutput(true);
                 OutputStream os = urlConnection.getOutputStream();
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
-                String post_data = URLEncoder.encode("username","UTF-8")+"="+URLEncoder.encode(Username.getText().toString(),"UTF-8")
-                        +"&"+URLEncoder.encode("password","UTF-8")+"="+URLEncoder.encode(Password.getText().toString(),"UTF-8");
+                String[] sep = Username.getText().toString().split("@");
+                String post_data = URLEncoder.encode("username","UTF-8")+"="+URLEncoder.encode(sep[0],"UTF-8")
+                        +"&"+URLEncoder.encode("password","UTF-8")+"="+URLEncoder.encode(Password.getText().toString(),"UTF-8")
+                        +"&"+URLEncoder.encode("type","UTF-8")+"="+URLEncoder.encode(sep[1],"UTF-8");
                 bfw.write(post_data);
                 bfw.flush();
                 bfw.close();
