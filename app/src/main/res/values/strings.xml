@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Mess Manager</string>
-    <string name="login_button">Login</string>
-    <string name="username">Username</string>
-    <string name="password">Password</string>
+    <string name="mess_prompt">"Choose your Mess"</string>
+    <string-array name="mess_array">
+        <item>Cedar (D1)</item>
+        <item>Maple (D2)</item>
+        <item>Pine (D9)</item>
+    </string-array>
 </resources>
