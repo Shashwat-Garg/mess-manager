@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#fafafa"
     android:orientation="vertical"
     tools:context=".MainDisplay">
 
@@ -12,21 +13,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#fff"
             android:text="Today's Menu :"
             android:textAlignment="center"
             android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="#311b92"
+            android:textColor="#039be5"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/menu_display"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Raita, Lauki, Baigan, Aloo"
+            android:background="#fff"
+            android:text=""
             android:textAlignment="center"
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="#311b92"
@@ -37,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:paddingVertical="10dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -46,31 +51,29 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/mess_allot_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#b9f6ca"
-                android:padding="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:background="#039be5"
                 android:text="Mess Allotment"
-                android:textColor="#311b92" />
+                android:textColor="#fff"
+                android:textSize="15sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#b9f6ca"
-                android:padding="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:background="#039be5"
                 android:text="Change in Menu"
-                android:textColor="#311b92" />
+                android:textColor="#fff"
+                android:textSize="15sp" />
 
         </LinearLayout>
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent" />
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -80,22 +83,25 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#b9f6ca"
-                android:padding="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:background="#039be5"
                 android:text="Advanced Order"
-                android:textColor="#311b92" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp" />
+                android:textColor="#fff"
+                android:textSize="15sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#b9f6ca"
-                android:padding="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:background="#039be5"
                 android:text="Feedback"
-                android:textColor="#311b92" />
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
 
         </LinearLayout>
     </LinearLayout>
@@ -109,14 +115,15 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffd180"
-            android:lines="20"
-            android:maxLines="20"
+            android:background="#f4c973"
+            android:lines="30"
+            android:maxLines="30"
             android:padding="8dp"
             android:text="Announcements"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="#311b92" />
+            android:textColor="#555"
+            android:textSize="18sp" />
 
     </LinearLayout>
 </LinearLayout>
