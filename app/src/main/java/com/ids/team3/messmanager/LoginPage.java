@@ -55,9 +55,6 @@ public class LoginPage extends AppCompatActivity {
 
     class loginClickedClass extends AsyncTask<Void,Void,Void>
     {
-        protected void onPreExecute() {
-            //Log.d("Pre-execute","Kya haal ?");
-        }
 
         @Override
         protected Void doInBackground(Void... voids) {
@@ -94,6 +91,7 @@ public class LoginPage extends AppCompatActivity {
             }
             if(success){
                 Intent intent = new Intent(com.ids.team3.messmanager.LoginPage.this, MainDisplay.class);
+                intent.putExtra("userid", Username.getText().toString());
                 startActivity(intent);
             }
             else{
@@ -101,9 +99,6 @@ public class LoginPage extends AppCompatActivity {
             }
             return null;
         }
-
-        protected void onPostExecute() {
-            //Log.d("Post-execute","Let's see!");
-        }
     }
 }
+

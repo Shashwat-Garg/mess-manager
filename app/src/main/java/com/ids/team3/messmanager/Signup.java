@@ -57,13 +57,9 @@ public class Signup extends AppCompatActivity {
 
     class SignupClicked extends AsyncTask<Void,Void,Void>
     {
-//        protected void onPreExecute() {
-            //Log.d("Pre-execute","Kya haal ?");
-//        }
 
         @Override
         protected Void doInBackground(Void... voids) {
-            //boolean success=false;
             try {
                 URL url = new URL("http://10.8.7.217/IDS/getCredentials.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -74,11 +70,11 @@ public class Signup extends AppCompatActivity {
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
                 String post_data =
                         URLEncoder.encode("name","UTF-8")+"="+URLEncoder.encode(name.getText().toString(),"UTF-8")
-                        +"&"+URLEncoder.encode("password","UTF-8")+"="+URLEncoder.encode(Password.getText().toString(),"UTF-8")
-                        +"&"+URLEncoder.encode("type","UTF-8")+"="+URLEncoder.encode(idType.getSelectedItem().toString(),"UTF-8")
-                        +"&"+URLEncoder.encode("hostel","UTF-8")+"="+URLEncoder.encode(hostel.getText().toString(),"UTF-8")
-                        +"&"+URLEncoder.encode("contact","UTF-8")+"="+URLEncoder.encode(contact.getText().toString(),"UTF-8")
-                        +"&"+URLEncoder.encode("id","UTF-8")+"="+URLEncoder.encode(ID.getText().toString(),"UTF-8");
+                                +"&"+URLEncoder.encode("password","UTF-8")+"="+URLEncoder.encode(Password.getText().toString(),"UTF-8")
+                                +"&"+URLEncoder.encode("type","UTF-8")+"="+URLEncoder.encode(idType.getSelectedItem().toString(),"UTF-8")
+                                +"&"+URLEncoder.encode("hostel","UTF-8")+"="+URLEncoder.encode(hostel.getText().toString(),"UTF-8")
+                                +"&"+URLEncoder.encode("contact","UTF-8")+"="+URLEncoder.encode(contact.getText().toString(),"UTF-8")
+                                +"&"+URLEncoder.encode("id","UTF-8")+"="+URLEncoder.encode(ID.getText().toString(),"UTF-8");
                 bfw.write(post_data);
                 bfw.flush();
                 bfw.close();
@@ -96,21 +92,10 @@ public class Signup extends AppCompatActivity {
             } catch (Exception e) {
                 Log.d("Error!",e.toString());
             }
-            /*
-            if(success){
-                Intent intent = new Intent(com.ids.team3.messmanager.LoginPage.this, MainDisplay.class);
-                startActivity(intent);
-            }
-            else{
-                Log.d("Credentials!","Wrong Credentials!");
-            }*/
             Intent intent = new Intent(com.ids.team3.messmanager.Signup.this, MainDisplay.class);
+            intent.putExtra("userid", ID.toString()+"@"+idType.getSelectedItem().toString());
             startActivity(intent);
             return null;
         }
-
-//        protected void onPostExecute() {
-            //Log.d("Post-execute","Let's see!");
-//        }
     }
 }

@@ -16,6 +16,7 @@
         android:paddingVertical="10dp">
 
         <TextView
+            android:id="@+id/loggeduser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Logged in as"
@@ -25,6 +26,7 @@
             android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/changeuser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login as another user"
