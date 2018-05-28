@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">Mess Manager</string>
     <string name="mess_prompt">"Choose your Mess"</string>
+    <string name="prof_prompt">"I'm a"</string>
     <string-array name="mess_array">
         <item>Cedar (D1)</item>
         <item>Maple (D2)</item>
         <item>Pine (D9)</item>
+    </string-array>
+    <string-array name="Profession">
+        <item>Student</item>
+        <item>Faculty</item>
+        <item>Mess Manager</item>
+        <item>Mess Staff</item>
     </string-array>
 </resources>
