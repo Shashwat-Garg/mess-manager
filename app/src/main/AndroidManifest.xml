@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ids.team3.messmanager">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,14 +20,10 @@
         </activity>
         <activity android:name=".MainDisplay" />
         <activity android:name=".Feedback" />
-        <activity android:name=".MessAllot">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Signup"/>
+        <activity android:name=".MessAllot" />
+        <activity android:name=".Signup" />
+        <activity android:name=".AdvancedOrder" />
+        <activity android:name=".ChangeMenu"></activity>
     </application>
 
 </manifest>

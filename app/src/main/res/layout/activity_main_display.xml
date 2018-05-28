@@ -63,6 +63,7 @@
 
 
             <Button
+                android:id="@+id/change_menu_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
@@ -81,6 +82,7 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/advanced_order_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
@@ -92,6 +94,7 @@
                 android:textSize="15sp" />
 
             <Button
+                android:id="@+id/feedback_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
