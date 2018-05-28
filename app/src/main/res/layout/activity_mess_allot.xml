@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingVertical="10dp"
     tools:context=".MessAllot">
 
     <LinearLayout
@@ -21,7 +22,7 @@
             android:textAlignment="center"
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="#039be5"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -30,34 +31,44 @@
             android:textAlignment="center"
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="#311b92"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingHorizontal="10dp"
-        android:paddingVertical="10dp">
+        android:orientation="vertical">
 
         <Spinner
-            android:id="@+id/sort_by_spinner"
+            android:id="@+id/mess_dropdown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="40dp"
             android:entries="@array/mess_array"
-            android:prompt="@string/mess_prompt" />
+            android:prompt="@string/mess_prompt"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="for the month of " />
-    </LinearLayout>
+            android:layout_below="@id/mess_dropdown"
+            android:text="for the month of "
+            android:textAlignment="center"
+            android:textSize="16sp" />
+    </RelativeLayout>
 
-    <LinearLayout
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#999"></View>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="15dp">
 
         <TextView
             android:id="@+id/mess_rating_tv"
@@ -65,18 +76,31 @@
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:text="Mess is rated :"
+            android:textAlignment="center"
             android:textColor="#000"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <RatingBar
             android:id="@+id/mess_rating_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/mess_rating_tv"
+            android:layout_centerInParent="true"
             android:isIndicator="true"
             android:numStars="5"
             android:rating="2.5"
-            android:stepSize="0.5" />
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar" />
 
-    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_below="@id/mess_rating_bar"
+            android:text="by users"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </RelativeLayout>
 
 </LinearLayout>
