@@ -13,9 +13,7 @@ public class vieworders extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activities_vieworders);
-        /*SpannableStringBuilder str = new SpannableStringBuilder("Your awesome text");
-        str.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD),0,,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        TextView tv = findViewById(R.id.bold);
-        tv.setText(str);*/
+
+
     }
 }
