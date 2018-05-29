@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listofppl_mm_">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:text="List of People"
+            android:gravity="center"/>
+
+        <TableLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/table_row1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:textSize="10dp"
+                    android:text="S.No"/>
+                <TextView
+                    android:id="@+id/age"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="10dp"
+                    android:layout_weight="1"
+                    android:text="Name"/>
+                <TextView
+                    android:textColor="#000"
+                    android:id="@+id/position"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="10dp"
+                    android:text="Hostel"/>
+
+
+            </TableRow>
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/table_row1"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text="1"/>
+                <TextView
+                    android:id="@+id/age1"
+                    android:textColor="#000"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="Pratyush Gaurav"/>
+                <TextView
+                    android:textColor="#000"
+                    android:id="@+id/position1"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="G2"/>
+
+
+            </TableRow>
+            <View
+                android:layout_height="3dip"
+                android:layout_width="match_parent"
+                />
+        </TableLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_listofppl_mm_" />
+
+</android.support.design.widget.CoordinatorLayout>

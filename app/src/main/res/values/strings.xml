@@ -13,4 +13,13 @@
         <item>Mess Manager</item>
         <item>Mess Staff</item>
     </string-array>
+    <string name="title_activity_messmanager_main">activity_messmanager_main</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_messmanager_listofppl">MessmanagerListofpplActivity</string>
+    <string name="title_activity_listofppl_mm_">listofppl_mm_</string>
+
 </resources>
