@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 public class activity_messmanager_main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -22,7 +23,6 @@ public class activity_messmanager_main extends AppCompatActivity
         setContentView(R.layout.activity_messmanager_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//kya krun???
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.button2);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

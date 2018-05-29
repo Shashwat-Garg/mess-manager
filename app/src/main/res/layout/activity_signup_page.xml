@@ -89,8 +89,16 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"/>
-
-
+        <Spinner
+            android:id="@+id/messofmanager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:entries="@array/mess_array"
+            android:prompt="@string/messmanagerprompt" />
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"

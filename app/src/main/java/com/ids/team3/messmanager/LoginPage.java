@@ -59,6 +59,8 @@ public class LoginPage extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             boolean success=false;
+            String idType="";
+            String id="";
             try {
                 URL url = new URL("http://10.8.7.217/IDS/checkCredentials.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -68,6 +70,8 @@ public class LoginPage extends AppCompatActivity {
                 OutputStream os = urlConnection.getOutputStream();
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
                 String[] sep = Username.getText().toString().split("@");
+                idType=sep[1];
+                id=sep[0];
                 String post_data = URLEncoder.encode("username","UTF-8")+"="+URLEncoder.encode(sep[0],"UTF-8")
                         +"&"+URLEncoder.encode("password","UTF-8")+"="+URLEncoder.encode(Password.getText().toString(),"UTF-8")
                         +"&"+URLEncoder.encode("type","UTF-8")+"="+URLEncoder.encode(sep[1],"UTF-8");
@@ -90,8 +94,13 @@ public class LoginPage extends AppCompatActivity {
                 Log.d("Error!",e.toString());
             }
             if(success){
-                Intent intent = new Intent(com.ids.team3.messmanager.LoginPage.this, MainDisplay.class);
-                intent.putExtra("userid", Username.getText().toString());
+                Intent intent;
+                if(idType.equals("manager")){
+                    intent = new Intent(com.ids.team3.messmanager.LoginPage.this, activity_messmanager_main.class);
+                }
+                else
+                    intent = new Intent(com.ids.team3.messmanager.LoginPage.this, MainDisplay.class);
+                intent.putExtra("userid", id+"@"+idType);
                 startActivity(intent);
             }
             else{

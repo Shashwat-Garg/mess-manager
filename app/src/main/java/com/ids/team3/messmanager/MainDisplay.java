@@ -21,6 +21,7 @@ public class MainDisplay extends AppCompatActivity {
     private String userid;
     private String idType;
     private Button MessAllotBtn;
+    private Button FeedbackBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class MainDisplay extends AppCompatActivity {
         userid = user[0];
         idType = user[1];
         MessAllotBtn = (Button) findViewById(R.id.mess_allot_btn);
+        FeedbackBtn = (Button) findViewById(R.id.feedback_btn);
         if(!idType.equals("student")){
             ViewGroup vg = (ViewGroup) MessAllotBtn.getParent();
             if(vg!=null){
@@ -40,8 +42,14 @@ public class MainDisplay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(idType.equals("student")) {
-                    launchActivity();
+                    launchMessAllotActivity();
                 }
+            }
+        });
+        FeedbackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchFeedbackActivity();
             }
         });
     }
@@ -54,9 +62,15 @@ public class MainDisplay extends AppCompatActivity {
         startActivity(homeIntent);
     }
 
-    private void launchActivity() {
+    private void launchMessAllotActivity() {
         Intent intent = new Intent(this, MessAllot.class);
         intent.putExtra("userid",userid);
+        startActivity(intent);
+    }
+
+    private void launchFeedbackActivity() {
+        Intent intent = new Intent(this, Feedback.class);
+        intent.putExtra("userid",userid+"@"+idType);
         startActivity(intent);
     }
 }

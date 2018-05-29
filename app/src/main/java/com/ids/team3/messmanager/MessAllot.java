@@ -77,7 +77,6 @@ public class MessAllot extends AppCompatActivity {
                 BufferedWriter bfw = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
                 String messname = messSelected.getSelectedItem().toString().split(" ")[1];
                 messname=messname.substring(1,3);
-                Log.d("details",messname+" "+userid);
                 String post_data =
                         URLEncoder.encode("userid", "UTF-8") + "=" + URLEncoder.encode(userid, "UTF-8")
                                 +"&"+URLEncoder.encode("messname", "UTF-8") + "=" + URLEncoder.encode(messname, "UTF-8");
