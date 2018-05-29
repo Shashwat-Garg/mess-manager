@@ -20,6 +20,10 @@
         </activity>
         <activity android:name=".MainDisplay" />
         <activity android:name=".Feedback" />
+        <activity android:name=".activity_messmanager_main" />
+        <activity android:name=".listofppl_mm_" />
+        <activity android:name=".ViewFeedback" />
+        <activity android:name=".vieworders" />
         <activity android:name=".MessAllot" />
         <activity android:name=".Signup" />
         <activity android:name=".AdvancedOrder" />
