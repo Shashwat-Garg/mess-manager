@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainDisplay" />
+        <activity android:name=".Feedback" />
         <activity android:name=".MessAllot">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
