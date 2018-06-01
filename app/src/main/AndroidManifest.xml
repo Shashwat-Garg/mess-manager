@@ -20,15 +20,19 @@
         </activity>
         <activity android:name=".MainDisplay" />
         <activity android:name=".Feedback" />
-        <activity android:name=".activity_messmanager_main"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity_messmanager_main"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".listofppl_mm_" />
         <activity android:name=".ViewFeedback" />
         <activity android:name=".vieworders" />
         <activity android:name=".MessAllot" />
         <activity android:name=".Signup" />
         <activity android:name=".AdvancedOrder" />
-        <activity android:name=".ChangeMenu"></activity>
+        <activity android:name=".ChangeMenu" />
+        <activity android:name=".Addons" />
+        <activity android:name=".HolidayOrder" />
+        <activity android:name=".AddOns"></activity>
     </application>
 
 </manifest>

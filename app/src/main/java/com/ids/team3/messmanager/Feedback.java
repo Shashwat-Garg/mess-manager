@@ -64,7 +64,7 @@ public class Feedback extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://10.8.7.217/IDS/getMess.php");
+                URL url = new URL("http://192.168.43.252/IDS/getMess.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
@@ -108,7 +108,7 @@ public class Feedback extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://10.8.7.217/IDS/submitFeedback.php");
+                URL url = new URL("http://192.168.43.252/IDS/submitFeedback.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
@@ -139,6 +139,9 @@ public class Feedback extends AppCompatActivity {
             } catch (Exception e) {
                 Log.d("Error!",e.toString());
             }
+            Intent intent = new Intent(com.ids.team3.messmanager.Feedback.this, MainDisplay.class);
+            intent.putExtra("userid",userid+"@"+idType);
+            startActivity(intent);
             return null;
         }
     }

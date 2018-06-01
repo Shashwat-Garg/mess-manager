@@ -1,53 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    tools:context=".AdvancedOrder">
-
-    <TableLayout
-        android:id="@+id/order"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TableRow
-            android:layout_marginVertical="4dp"
-            android:background="#fafafa">
-
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#f5f5f5"
-                android:padding="8dp" />
-
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:background="#999"></View>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#f5f5f5"
-                android:padding="8dp"
-                android:text="500"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16sp" />
-
-        </TableRow>
-
-    </TableLayout>
+    android:orientation="vertical"
+    tools:context=".AddOns">
 
     <Button
+        android:id="@+id/addon_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#03a9f4"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#039be5"
+        android:text="Addon"
         android:textColor="#fff"
-        android:text="submit" />
-</RelativeLayout>
+        android:textSize="15sp" />
+
+
+    <Button
+        android:id="@+id/holiday_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#039be5"
+        android:text="Holiday Order"
+        android:textColor="#fff"
+        android:textSize="15sp" />
+
+</LinearLayout>

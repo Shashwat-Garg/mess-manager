@@ -62,7 +62,7 @@ public class LoginPage extends AppCompatActivity {
             String idType="";
             String id="";
             try {
-                URL url = new URL("http://10.8.7.217/IDS/checkCredentials.php");
+                URL url = new URL("http://192.168.43.252/IDS/checkCredentials.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);

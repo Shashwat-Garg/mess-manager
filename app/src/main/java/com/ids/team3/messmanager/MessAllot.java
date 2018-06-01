@@ -60,6 +60,7 @@ public class MessAllot extends AppCompatActivity {
             public void onClick(View v) {
                 new submitAllotment().execute();
                 Intent intent = new Intent(com.ids.team3.messmanager.MessAllot.this, MainDisplay.class);
+                intent.putExtra("userid",userid+"@"+idType);
                 startActivity(intent);
             }
         });
@@ -82,7 +83,7 @@ public class MessAllot extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://10.8.7.217/IDS/getRating.php");
+                URL url = new URL("http://192.168.43.252/IDS/getRating.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
@@ -125,7 +126,7 @@ public class MessAllot extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://10.8.7.217/IDS/getMessChoice.php");
+                URL url = new URL("http://192.168.43.252/IDS/getMessChoice.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);

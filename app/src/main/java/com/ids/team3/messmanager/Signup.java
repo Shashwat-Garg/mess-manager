@@ -81,7 +81,7 @@ public class Signup extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://10.8.7.217/IDS/getCredentials.php");
+                URL url = new URL("http://192.168.43.252/IDS/getCredentials.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
