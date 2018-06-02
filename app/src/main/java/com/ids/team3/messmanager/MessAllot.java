@@ -24,6 +24,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class MessAllot extends AppCompatActivity {
+    private String urlString = "http://yourip/folder/";
     private String userid;
     private String idType;
     private float rating=0;
@@ -83,7 +84,7 @@ public class MessAllot extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://192.168.43.252/IDS/getRating.php");
+                URL url = new URL(urlString+"getRating.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
@@ -126,7 +127,7 @@ public class MessAllot extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://192.168.43.252/IDS/getMessChoice.php");
+                URL url = new URL(urlString+"getMessChoice.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);

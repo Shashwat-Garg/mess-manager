@@ -24,6 +24,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class LoginPage extends AppCompatActivity {
+    private String urlString = "http://yourip/folder/";
     ActionBar actionbar;
     private Button LoginBtn;
     private Button SignupBtn;
@@ -62,7 +63,7 @@ public class LoginPage extends AppCompatActivity {
             String idType="";
             String id="";
             try {
-                URL url = new URL("http://192.168.43.252/IDS/checkCredentials.php");
+                URL url = new URL(urlString+"checkCredentials.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);

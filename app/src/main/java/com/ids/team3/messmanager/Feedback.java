@@ -28,6 +28,7 @@ import java.net.URLEncoder;
 
 
 public class Feedback extends AppCompatActivity {
+    private String urlString = "http://yourip/folder/";
     private Spinner messName;
     private EditText description;
     private RatingBar rating;
@@ -64,7 +65,7 @@ public class Feedback extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://192.168.43.252/IDS/getMess.php");
+                URL url = new URL(urlString+"getMess.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
@@ -108,7 +109,7 @@ public class Feedback extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://192.168.43.252/IDS/submitFeedback.php");
+                URL url = new URL(urlString+"submitFeedback.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);

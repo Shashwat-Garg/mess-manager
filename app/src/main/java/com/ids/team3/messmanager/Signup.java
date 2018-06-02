@@ -28,6 +28,7 @@ import java.net.URLEncoder;
 
 public class Signup extends AppCompatActivity {
     ActionBar actionbar;
+    private String urlString = "http://yourip/folder/";
     private Button SignupBtn;
     private EditText name;
     private EditText ID;
@@ -81,7 +82,7 @@ public class Signup extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             try {
-                URL url = new URL("http://192.168.43.252/IDS/getCredentials.php");
+                URL url = new URL(urlString+"getCredentials.php");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("POST");
                 urlConnection.setDoInput(true);
