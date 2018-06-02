@@ -1,5 +1,5 @@
 <?php
-	$db = mysqli_connect('localhost','root','shshwtgrg','IDS')
+	$db = mysqli_connect('localhost','root','','IDS')
 	or die('Error connecting to MySQL server.');
 	$id = 0;
 	$userid=$_POST['userid'];
